@@ -14,7 +14,13 @@
 {{!--       <span class="rating pull-right">
         {{song.rating}}
       </span> --}}
-      {{star-rating rating=song.rating}}
+      {{!-- {{star-rating rating=song.rating}} --}}
+      {{star-rating
+        rating=song.rating
+        item=song
+        on-click=(action "updateRating")
+      }}
+
     </li>
   {{/each}}
 </ul>
